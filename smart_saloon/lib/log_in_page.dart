@@ -6,7 +6,14 @@ class LogInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Smart Salon"),centerTitle: true,),
+      appBar: AppBar(title: Text("Smart Salooooon",
+      style: Theme.of(context).appBarTheme.titleTextStyle,), 
+      centerTitle: true,
+      ),
+      body: Column(children: [
+          
+        ],
+      ),
     );
   }
 }

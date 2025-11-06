@@ -11,16 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Smart Salooooon",
+      title: "Smart Salon",
       theme: ThemeData(
+        fontFamily: 'Lato',
         colorScheme: ColorScheme.fromSeed(
             seedColor: Color.fromRGBO(254, 206, 1, 1),
             primary: Color.fromRGBO(254, 206, 1, 1), 
           ),
         appBarTheme: AppBarTheme(
           titleTextStyle: TextStyle(
-            fontSize: 20,
-            color: Colors.black
+            //fontFamily: 'KaushanScript',
+            fontSize: 26,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
