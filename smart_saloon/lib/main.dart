@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smart_saloon/log_in_page.dart';
+import 'package:smart_saloon/sign_in_page.dart';
+import 'package:smart_saloon/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Smart Salon",
       theme: ThemeData(
         fontFamily: 'Lato',
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: true,
       ),
-      home: LogInPage(),
+      home: SignInPage(),
     );
   }
 }

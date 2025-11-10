@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class LogInPage extends StatelessWidget {
-  const LogInPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class LogInPage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.white, Colors.blueAccent, Colors.blue],
+              colors: [Colors.white, Colors.deepOrangeAccent, Colors.blue],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
@@ -71,7 +71,7 @@ class LogInPage extends StatelessWidget {
                             children: [
                               //editing Log in text
                               Text(
-                                "Log In",
+                                "Sign Up",
                                 style: TextStyle(
                                   fontSize: 40,
                                   fontWeight: FontWeight.bold,
@@ -81,42 +81,37 @@ class LogInPage extends StatelessWidget {
                               const SizedBox(
                                 height: 20,
                               ), //keeping a constant space between the text and text field
-                              //user name  textfield part
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 15,
-                                ),
-                                child: TextField(
-                                  //user name text field
-                                  cursorColor: Colors.deepPurple,
-                                  decoration: InputDecoration(
-                                    //decoration time
-                                    hintText:
-                                        "Username", //the text which will be shown inside the text field as default
-                                    hintStyle: TextStyle(
+                              //Email  textfield part
+                              TextField(
+                                //user name text field
+                                cursorColor: Colors.deepPurple,
+                                decoration: InputDecoration(
+                                  //decoration time
+                                  hintText:
+                                      "Email", //the text which will be shown inside the text field as default
+                                  hintStyle: TextStyle(
+                                    color: Colors.white60,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      12,
+                                    ), //the shape of the box
+                                    borderSide: BorderSide(
                                       color: Colors.white60,
-                                      fontWeight: FontWeight.bold,
+                                      width: 1.5,
                                     ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(
-                                        12,
-                                      ), //the shape of the box
-                                      borderSide: BorderSide(
-                                        color: Colors.white60,
-                                        width: 1.5,
-                                      ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: const Color(0xFF6A1B9A),
+                                      width: 1.5,
                                     ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                      borderSide: BorderSide(
-                                        color: const Color(0xFF6A1B9A),
-                                        width: 1.5,
-                                      ),
-                                    ),
-                                    prefixIcon: Icon(
-                                      Icons.person_4_sharp,
-                                      color: Colors.white70,
-                                    ),
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.person_4_sharp,
+                                    color: Colors.white70,
                                   ),
                                 ),
                               ),
@@ -124,41 +119,69 @@ class LogInPage extends StatelessWidget {
                                 height: 20,
                               ), //keeping a constant space between the text and text field
                               //password textfield part
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 15,
-                                ),
-                                child: TextField(
-                                  cursorColor: Colors.deepPurple,
-                                  obscureText: true,
-                                  decoration: InputDecoration(
-                                    hintText: "Password",
-                                    hintStyle: TextStyle(
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.bold,
+                              TextField(
+                                cursorColor: Colors.deepPurple,
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  hintText: "Password",
+                                  hintStyle: TextStyle(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: Colors.white60,
+                                      width: 1.5,
                                     ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                      borderSide: BorderSide(
-                                        color: Colors.white60,
-                                        width: 1.5,
-                                      ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: Colors.deepPurple,
+                                      width: 1.5,
                                     ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                      borderSide: BorderSide(
-                                        color: Colors.deepPurple,
-                                        width: 1.5,
-                                      ),
-                                    ),
-                                    prefixIcon: Icon(
-                                      Icons.lock,
-                                      color: Colors.white70,
-                                    ),
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.lock,
+                                    color: Colors.white70,
                                   ),
                                 ),
                               ),
                               const SizedBox(height: 20),
+                              // re-write password textfield part
+                              TextField(
+                                cursorColor: Colors.deepPurple,
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  hintText: "Re-Write Password",
+                                  hintStyle: TextStyle(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: Colors.white60,
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: Colors.deepPurple,
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.lock,
+                                    color: Colors.white70,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 20),
+
+                              //Log in Button part
                               SizedBox(
                                 width: 165,
                                 child: FilledButton.icon(
@@ -172,9 +195,10 @@ class LogInPage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                   ),
-                                  icon: Icon(Icons.login, color: Colors.white),
+                                  icon: Icon(Icons.login_sharp, color: Colors.white,size: 25,),
+                                  iconAlignment: IconAlignment.end,
                                   label: Text(
-                                    "Log In",
+                                    "Sign Up",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
@@ -189,18 +213,19 @@ class LogInPage extends StatelessWidget {
                                 //mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    "Don't remember your password?",
-                                    style: TextStyle(color: Colors.white),
+                                    "Already have an account?",
+                                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                   ),
         
                                   TextButton(
                                     onPressed: () {},
                                     child: Text(
-                                      "Forgot password",
+                                      "Sign In",
                                       style: TextStyle(
                                         color: Colors.deepPurpleAccent,
                                         fontWeight: FontWeight.bold,
                                         decoration: TextDecoration.underline,
+                                        fontSize: 20,
                                       ),
                                     ),
                                   ),
