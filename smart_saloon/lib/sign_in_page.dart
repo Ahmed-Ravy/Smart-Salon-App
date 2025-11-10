@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:smart_saloon/sign_up_page.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -199,9 +200,10 @@ class SignInPage extends StatelessWidget {
                                   TextButton(
                                     onPressed: () {},
                                     style: TextButton.styleFrom(
-                                       padding: EdgeInsets.all(0),
-                                       minimumSize: Size.zero,
-                                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                      padding: EdgeInsets.all(0),
+                                      minimumSize: Size.zero,
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
                                     ),
                                     child: Text(
                                       "Forgot password",
@@ -219,7 +221,12 @@ class SignInPage extends StatelessWidget {
                                     height: 1.0, // Thickness of the underline
                                     width:
                                         130.0, // Adjust width to match the text (or use a calculated value)
-                                    color: Color.fromARGB(158,255,254,254,), // The color of the underline
+                                    color: Color.fromARGB(
+                                      158,
+                                      255,
+                                      254,
+                                      254,
+                                    ), // The color of the underline
                                   ),
                                 ],
                               ),
@@ -244,6 +251,12 @@ class SignInPage extends StatelessWidget {
                   FilledButton(
                     onPressed: () {
                       // Navigate to the Sign Up screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUpPage(),
+                        ),
+                      );
                     },
                     style: FilledButton.styleFrom(
                       backgroundColor: const Color(0xFF6A1B9A),

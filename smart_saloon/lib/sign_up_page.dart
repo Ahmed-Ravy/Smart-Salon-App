@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:smart_saloon/sign_in_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -26,7 +27,7 @@ class SignUpPage extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               child: Column(
                 children: [
-                  const SizedBox(height: 40,),
+                  const SizedBox(height: 40),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 30),
                     //keeping a padding to look good...padding at all side of "smart salon" text
@@ -48,7 +49,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 40), //making a space between both text
-        
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: ClipRRect(
@@ -65,7 +66,10 @@ class SignUpPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: Colors.white24,
                             borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.white24, width: 1.5),
+                            border: Border.all(
+                              color: Colors.white24,
+                              width: 1.5,
+                            ),
                           ),
                           child: Column(
                             children: [
@@ -195,7 +199,11 @@ class SignUpPage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                   ),
-                                  icon: Icon(Icons.login_sharp, color: Colors.white,size: 25,),
+                                  icon: Icon(
+                                    Icons.login_sharp,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
                                   iconAlignment: IconAlignment.end,
                                   label: Text(
                                     "Sign Up",
@@ -207,38 +215,54 @@ class SignUpPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 20),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                //mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    "Already have an account?",
-                                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
-                                  ),
-        
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Sign In",
-                                      style: TextStyle(
-                                        color: Colors.deepPurpleAccent,
-                                        fontWeight: FontWeight.bold,
-                                        decoration: TextDecoration.underline,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                              
                             ],
                           ),
                         ),
                       ),
                     ),
                   ),
-        
-                  const SizedBox(height: 80),
+
+                  const SizedBox(height: 30),
+                  const Text(
+                    "Already have an account?",
+                    style: TextStyle(
+                      color: Colors.white70, // Adjust color to match your theme
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  // The "Sign in" button (using TextButton for a cleaner look)
+                  FilledButton(
+                    onPressed: () {
+                      // Navigate to the Sign Up screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInPage(),
+                        ),
+                      );
+                    },
+                    style: FilledButton.styleFrom(
+                      backgroundColor: const Color(0xFF6A1B9A),
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text(
+                      'Sign In',
+                      style: TextStyle(
+                        color: Colors.white, // Contrast color for the link
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        // Optional: Add an underline if desired
+                        // decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
