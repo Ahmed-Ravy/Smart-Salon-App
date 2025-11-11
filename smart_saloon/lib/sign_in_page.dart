@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:smart_saloon/home_page.dart';
 import 'package:smart_saloon/sign_up_page.dart';
 
 class SignInPage extends StatelessWidget {
@@ -179,7 +180,12 @@ class SignInPage extends StatelessWidget {
                                 SizedBox(
                                   width: 165,
                                   child: FilledButton.icon(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      //Navigate to the fome page when sign in successfull
+                                      Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context)=> const HomePage(),),
+                                      );
+                                    },
                                     style: FilledButton.styleFrom(
                                       backgroundColor: const Color.fromARGB(255, 109, 139, 176),
                                       padding: const EdgeInsets.symmetric(

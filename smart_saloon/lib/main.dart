@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_saloon/sign_in_page.dart';
-import 'package:smart_saloon/sign_up_page.dart';
+import 'package:smart_saloon/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +51,7 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: true,
       ),
-      home: SignUpPage(),
+      home: HomePage(),
     );
   }
 }
